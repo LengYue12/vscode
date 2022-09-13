@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*
+            MVVM:前端的架构模式
+            M:Model 负责存储数据
+            V:View 负责页面展示
+            VM:ViewModel 负责业务处理（MVVM模式的核心）
+        */
+    </style>
+</head>
+<body>
+    <!-- 定义id为app的div -->
+    <div id="app">
+        <!-- View 视图部分 -->
+        <h2>{{name}}</h2>
+    </div>
+</body>
+<script src="./js/vue.min.js"></script>
+<script>
+    // 创建vue实例   就是 VM  ViewModel
+    var VM = new Vue({
+        // 绑定指定区域
+        el:"#app",
+        // 定义数据
+        // data就是MVVM模式中的 model
+        data:{
+            name:"喜羊羊",
+        }
+    })
+
+</script>
+</html>

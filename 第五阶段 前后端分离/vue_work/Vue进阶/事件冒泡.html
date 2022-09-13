@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 事件冒泡 ：当点击子元素的事件时，如果父元素有相同的事件，那么也会被触发
+         解决方式：@click.stop
+    -->
+    <div id="app" @click="log('div点击事件！')">
+        <button @click.stop="log('button的点击事件！')">按钮</button>
+    </div>
+</body>
+<script src="./js/vue.min.js"></script>
+<script>
+    var VM = new Vue({
+        el:"#app",
+        methods: {
+            log(t){
+                alert(t);
+            }
+        },  
+    })
+</script>
+</html>

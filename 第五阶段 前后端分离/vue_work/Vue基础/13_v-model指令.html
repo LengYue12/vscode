@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*
+            v-model：可以实现双向数据绑定
+            单向数据绑定：将model绑定到view上，当model发生变化时，view会随之变化
+            双向数据绑定：View也会绑定到Model上，View视图发生变化时，model也会随之改变
+        */
+    </style>
+</head>
+<body>
+    <div id="app">
+        <input type="button" value="修改message" @click="update"/>
+
+        <!-- View 视图 -->
+        <!-- <input type="text" v-bind:value="message"/> -->
+
+        <!-- v-model 实现双向数据绑定 -->
+        <input type="text" v-model="message">
+        <input type="password" v-model="password">
+        <h2>{{message}}</h2>
+    </div>
+</body>
+<script src="js/vue.min.js"></script>
+<script>
+    // VM 业务逻辑控制  Vue的实例
+    var VM = new Vue({
+        el:"#app",
+        // Model 数据存储
+        data:{
+            message:"引线在燃烧",
+            password:12345,
+        },
+        methods: {
+            update:function(){
+                this.message="引线"
+            } 
+        },
+    })
+
+</script>
+</html>

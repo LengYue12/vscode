@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="xxx" onsubmit="return login()">
+        <p>账号：<input id="username"></p>
+        <p>密码：<input id="password"></p>
+        <p><button>登录</button></p>
+    </form>
+
+    <script>
+        function login(){
+           var name =  document.getElementById("username").value;
+           if(name == ""){
+                alert("账号不能为空！");
+                return false;
+           }
+               return true;
+           
+        }
+    </script>
+
+</body>
+</html>

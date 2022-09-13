@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="add()">添加</button>
+    <button onclick="del()">删除</button>
+    <button onclick="rep()">替换</button>
+
+    <div></div>
+    <img  id = "" src="" title="">
+    <script>
+        function add(){
+           var img =  document.createElement("img");    // <img>
+           img.setAttribute("src","../html/img/唐心.jpg");  // <img src="../html/img/唐心.jpg">
+           img.setAttribute("title","唐心");    // <img src="../html/img/唐心.jpg" title="唐心">
+           img.setAttribute("id","meinv");  // <img src="../html/img/唐心.jpg" title="唐心" id="meinv">
+
+          var divs =  document.getElementsByTagName("div");
+          divs[0].appendChild(img);
+        }
+
+        function del(){
+            var img = document.getElementById("meinv");
+            img.parentNode.removeChild(img);    // 必须通过父节点才能删除子节点
+        }
+
+        function rep(){
+           var imgold =  document.getElementById("meinv");
+           // 通过修改元素的属性，做的替换
+           //img.setAttribute("src","../html/img/玲玲.jpg");
+            
+           var imgnew =  document.createElement("img");    
+           imgnew.setAttribute("src","../html/img/小朵.jpg");
+           
+           imgold.parentNode.replaceChild(imgnew, imgold);
+        }
+    </script>
+</body>
+</html>

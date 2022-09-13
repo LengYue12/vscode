@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    /* .wai{
+        width: 1500px;
+        height: 1000px;
+        border:20px red solid;
+    } */
+    .nei{
+        width: 1400px;
+        height: 1000px;
+        background-image: url("img/小朵.jpg"); 
+        background-repeat: no-repeat;
+        background-position: 0px 0px;
+    }
+    @keyframes x{
+        0%{
+            margin-left: 0px;
+        }
+        25%{
+            background:url("img/霏霏.jpg")no-repeat ;
+        }
+        50%{
+            background: url("img/冰冰.jpg")no-repeat;
+        }
+        75%{
+            background: url("img/玲玲.jpg")no-repeat;
+        }
+        100%{
+            background: url("img/唐心.jpg")no-repeat;
+            margin-left: 1600px;
+        }
+    }
+    .nei{
+        animation: x 3s linear infinite alternate;
+    }
+</style>
+<body>
+    <div class="wai">
+        <div class="nei"></div>
+    </div>
+</body>
+</html>

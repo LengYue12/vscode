@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    dd{
+        display: none;
+    }
+</style>
+<body>
+
+    <nav>
+        <header>修仙小说</header>
+
+        <ul>
+            <li>
+                <dl>
+                    <dt>鹅是老五</dt>
+                    <dd>1.最强弃少</dd>
+                    <dd>2.造化之门</dd>
+                    <dd>3.天下第九</dd>
+                </dl>
+            </li>
+
+            <li>
+                <dl>
+                    <dt>天蚕土豆</dt>
+                    <dd>1.斗破苍穹</dd>
+                    <dd>2.武动乾坤</dd>
+                    <dd>3.大主宰</dd>
+                </dl>
+            </li>
+
+            <li>
+                <dl>
+                    <dt>唐家三少</dt>
+                    <dd>1.斗罗大陆</dd>
+                    <dd>2.绝世唐门</dd>
+                    <dd>3.龙王传说</dd>
+                </dl>
+            </li>
+        </ul>
+    </nav>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script>
+
+        $("nav dt").click(function(){   // 点dt标题
+            // 让dd除了自己(this就是dt)的兄弟dd全部闭合上
+            $("dd").not($(this).siblings()).slideUp(1000);
+            // 让(dt)自己的兄弟dd切换，显示的闭合，闭合的显示
+            $(this).siblings().slideToggle(1000);
+        });
+
+    </script>
+</body>
+</html>

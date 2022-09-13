@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 使用Object创建通用对象 
+    // var user = new Object();
+    // user.name = "吕布";
+    // user.age = 13;
+    // user.say = function(){
+    //     document.write("大家好，我叫：" + this.name + "今年" + this.age + "岁了！");
+    // }
+    // user.say();
+
+    // 使用构造函数
+    // function userinfo(name,age) {
+    //     this.name = name;
+    //     this.age = age;
+    //     this.say = function(){
+    //         document.write("大家好,我叫：" + this.name + "今年" + this.age + "岁了");
+    //     }
+    // }
+    // var user = new userinfo("唐心",28);
+    // user.say();
+
+    // 使用直接量
+    var user = {
+        username : "孙悟饭",
+        age : 13,
+        say : function(){
+            document.write("大家好,我叫：" + this.username + "今年" + this.age + "岁了");
+        }
+    }
+    user.say();
+</script>
+</body>
+</html>

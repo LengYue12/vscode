@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var json1 = {name : "刘能", age:31};
+        document.write("姓名：" + json1.name + "年龄：" + json1.age + "岁了！");
+
+        // json数组
+        var jsonarr = [{name : "赵本山", age:58},{name:"吴亦凡", age:30}];
+        document.write("" + jsonarr[0].name + jsonarr[0].age + "岁");
+        document.write("" + jsonarr[1].name + jsonarr[1].age + "岁");
+
+        // 复杂的json对象
+        var fan = {
+            name : "吴亦凡",
+            sex : 30,
+            hobby : ["说唱","强奸","我的很大"]
+        };
+        document.write(fan.name + "爱说" + fan.hobby[2]);
+    </script>
+</body>
+</html>

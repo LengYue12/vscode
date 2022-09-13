@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>测试</button>
+    <ul>
+        <li>a</li>
+        <li>b</li>
+        <li>
+            <p>c</p>
+        </li>
+        <h3>d</h3>
+    </ul>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script>
+
+        $("button").click(function(){
+            // var x = $("ul").children().text();
+            // var x = $("ul").children("li:first  ").text();
+            // var x = $("ul").find("p").text();
+            var x = $("ul").find("h3").text();
+            alert(x);
+        });
+
+    </script>
+</body>
+</html>

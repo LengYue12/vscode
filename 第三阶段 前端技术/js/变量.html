@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    var aa = "欢迎来到\"JavaScript世界";
+    console.log(aa);
+    var a = 10+'a';
+    console.log(a + "|" + typeof(a));    // 数字 + 字符串：数字转换为字符串 10a
+    var b = true + 5;
+    console.log(b + "|" + typeof(b));    // 数字 + 布尔值：ture转换为1，false转为0 true+5 = 6
+    var c = true+'a';
+    console.log(c + "|" + typeof(c));  // 字符串 + 布尔值：truea
+    var d = true+true;
+    console.log(d + "|" + typeof(d)); // 布尔值 + 布尔值：true+true = 2
+    console.log(parseInt("3.32"));
+    console.log(parseFloat("3.232"));
+    var aa = "10";
+    var bb = "10";
+    if(aa == bb){
+        alert("equal");
+    }
+    if(aa === bb){
+        alert("same");
+    }
+    </script>
+    
+</body>
+</html>

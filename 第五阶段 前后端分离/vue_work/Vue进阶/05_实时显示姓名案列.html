@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- 根据用户输入的值做双向数据绑定 -->
+        <!-- 当视图中的数据发生变化，model模型中的数据也会变化 -->
+        <label>姓：<input type="text" v-model="fristName"></label>
+        <label>名：<input type="text" v-model="lastName"></label>
+        {{fullName}}
+    </div>
+</body>
+<script src="js/vue.min.js"></script>
+<script>
+    var VM = new Vue({
+        el:"#app",
+        data:{
+            fristName:"",
+            lastName:"",
+            fullName:""
+        },
+        // 侦听器
+        watch:{
+            fristName:function(navl,oval){// 参数1 是新值  参数2 是旧值
+                this.fullName = navl + " " + this.lastName;
+            },
+            lastName:function(navl,oval){
+                this.fullName = this.fristName + " " + navl;
+            }
+        }
+    })
+</script>
+</html>

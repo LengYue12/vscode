@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var time = new Date();
+        console.log(time);
+
+        var year = time.getFullYear();  // 年份
+        var month = time.getMonth() + 1;    // 月份从0开始，11结束，所以国内要+1
+        var day = time.getDate();    // 几号
+        var hour = time.getHours(); // 几点
+        var mm = time.getMinutes(); // 分钟
+        var ss = time.getSeconds(); // 秒
+        var ms = time.getMilliseconds(); // 毫秒 1000毫秒=1秒
+        var timestr = year + "年" + month + "月" + day + "日" + hour + "时" + mm + "分" +  ss + "秒" + ms + "毫秒";   
+        console.log(timestr); 
+    </script>
+
+</body>
+</html>

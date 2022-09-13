@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="tu" src="img/玲玲.jpg" title="美女大图" width="300">
+    <hr>
+    <button>替换</button>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script>
+
+        $("button").click(function(){
+            $("#tu").attr("src","img/唐心.jpg");
+            $("#tu").attr("title","高清无码");
+            $("#tu").attr({"width":"800"},{"height":"1000"});
+        });
+
+    </script>
+</body>
+</html>

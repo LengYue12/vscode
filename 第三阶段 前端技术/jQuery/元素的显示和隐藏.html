@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <img src="img/唐心.jpg" width="400">
+    
+    <hr>
+    <button id="btn1">显示</button>
+    <button id="btn2">隐藏</button>
+    <button id="btn3">切换</button>
+    <button id="btn4">透明</button>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script>
+
+        $("#btn1").click(function(){
+            // fast：快速的
+            // slow：缓慢的
+            // 毫秒:自定义
+            // $("img").show("slow");  // 带动画效果的显示
+            // $("img").slideDown(2000);   // 拉伸效果的显示
+            $("img").fadeIn("slow");        // 淡入淡出的显示
+        });
+        
+        $("#btn2").click(function(){
+            // $("img").hide(2000);    // 带动画效果的隐藏
+            // $("img").slideUp(2000); // 拉伸效果的隐藏
+            $("img").fadeOut("slow");        // 淡入淡出的隐藏
+        });
+
+        $("#btn3").click(function(){
+            // $("img").toggle(2000);
+            // $("img").slideToggle(1000);
+            $("img").fadeToggle(1000);  // 切换
+        });
+
+        $("#btn4").click(function(){
+            $("img").fadeTo(1000,0.5);  // 1秒内变成50%的透明度
+        });
+    </script>
+</body>
+</html>

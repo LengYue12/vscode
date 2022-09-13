@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>账号：<input id="a" value="请输入账号名..."></p>
+    <p>密码：<input></p>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script>
+        // 获得焦点,激活
+        $("#a").focus(function(){
+            $(this).val("");
+        });
+
+        // 失去焦点,未激活
+        $("#a").blur(function(){
+            $(this).val("请输入账号名...");
+        });
+    </script>
+</body>
+</html>

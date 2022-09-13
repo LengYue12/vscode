@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h2 id="msg">{{message}}</h2>
+        <button @click="next">获取下一句</button>
+    </div>
+</body>
+<script src="js/vue.min.js"></script>
+<script>
+    var VM = new Vue({
+        el:"#app",
+        data:{
+            message:"抬头望明月"
+        },
+        methods: {
+            show(){
+                alert("show方法执行了！");
+            },
+            next(){
+                this.message="低头思故乡"
+            }
+        },
+        // beforeCreate() {
+        //     // 在Vue实例创建之前执行
+        //     alert("1.beforeCreate函数，在Vue对象实例化之前执行");
+                // 获取data中的数据时是未定义，因为Vue实例还未创建
+        //     console.log(this.message);  // undefined
+                // 获取不到methods中的方法，因为Vue实例还未把属性初始化
+        //     this.show();    // this.show is not a function
+        // },
+        // created() {
+            // 在DOM页面加载之前之前执行
+        //     alert("2.created函数执行时，Vue实例化已完成，但是DOM页面还未生成");
+                // 在此方法中调用就可以获取到view中的数据了，因为实例化已完成，但是页面还未生成
+        //     console.log(this.message);  
+        //     this.show();    
+        // },
+        // beforeMount() {
+            // 模型data中的数据已编辑完成，但是还未渲染到View视图
+        //     alert("3.beforeMount函数执行时，模版已经在内存中编辑完成了，但是还没有被渲染到页面中");
+                // View页面中的内容还未被渲染，获取不到
+        //     console.log("页面显示的内容" + document.getElementById("msg").innerText)
+            // 可以获取到data中的数据
+        //     console.log("data中的数据" + this.message);
+        // },
+        // mounted() {
+        //      执行mounted时，页面已经渲染完成了，就差显示了，所以可以获取到页面中的内容
+        //     alert("4.mounted函数执行时，模版已经被渲染到页面，执行完就会显示页面")
+                // 已经渲染完了，所有可以获取到View页面的内容
+        //     console.log("页面显示的内容" + document.getElementById("msg").innerText)
+        // },
+        // beforeUpdate() {
+            // 当修改msg值时，data数据已改变，但是View视图还未被渲染
+        //     alert("5.beforeUpdate执行时，内存中的数据已经更新，但是还没有渲染到页面")
+        //     // 所以当获取msg的时候，还是之前的内容。data数据已经改变，还没有渲染到页面
+        //     console.log("页面显示的内容" + document.getElementById("msg").innerText)
+            // 可以获取data中的数据
+        //     console.log("data中的数据" + this.message);
+
+        // },
+        updated() {
+            alert("6.updated执行时，内存中的数据已经更新了，此方法执行完显示页面")
+            // 此方法执行时，页面中的内容和data中的数据都已经修改了
+            console.log("页面显示的内容" + document.getElementById("msg").innerText)
+            console.log("data中的数据" + this.message);
+        },
+    })
+</script>
+</html>

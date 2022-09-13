@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="add()">添加</button>
+    <button onclick="del()">删除</button>
+    <button onclick="rep()">替换</button>
+    <div></div>
+    <script>
+        function add(){
+           var img =  document.createElement("img");
+           img.setAttribute("src","img/冰冰.jpg");
+           img.setAttribute("title","美女");
+           img.setAttribute("id","meinv");
+
+           var divs = document.getElementsByTagName("div");
+           divs[0].append(img);
+        }
+        
+        function del(){
+           var img =  document.getElementById("meinv");
+           img.parentNode.removeChild(img);
+        }
+
+        function rep(){
+           var img =  document.getElementById("meinv");
+           img.setAttribute("src","img/唐心.jpg");
+        }
+    </script>
+</body>
+</html>

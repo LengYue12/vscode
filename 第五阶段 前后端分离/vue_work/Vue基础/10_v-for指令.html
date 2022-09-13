@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*
+            v-for指令：根据数据生成列表结构
+             1.数组经常和v-for结合使用，遍历数组
+             2.语法格式:(item,index) in 数据
+             3.数组的长度变化，会同步更新到页面上，响应式的。数据发生变化，页面也发生变化
+        */
+    </style>
+</head>
+<body>
+    <div id="app">
+        <input type="button" value="添加数据" @click="add">  
+        <input type="button" value="移除数据" @click="remove">  
+
+        <ul>
+            <!-- 在li标签中  获取数组的元素并展示  遍历数组arr -->
+            <!-- 遍历数组arr，item为从数组中取出来的数据 -->
+            <li v-for="item,index in arr">
+               {{index+1}}铠甲{{item}}
+            </li>
+        </ul>
+
+
+        <!-- 使用he标签显示
+            
+        -->
+        <h2 v-for="p in persons">{{p.name}}</h2>
+    </div>
+</body>
+<script src="js/vue.min.js"></script>
+<script>
+    var VM = new Vue({
+        el:"#app",
+        data:{  
+            // 数组
+            arr:["炎龙侠","风鹰侠","雪獒侠","地虎侠"],
+
+            // 对象数组
+            persons:[
+                {name:"迪迦"},
+                {name:"泰罗"},
+                {name:"艾斯"}
+            ]
+        },
+        methods: {
+            add:function(){
+                // 向数组添加元素 push
+                this.persons.push({name:"盖亚"});
+            },
+            remove:function(){
+                // 移除数据
+                this.persons.shift();
+            }
+        },
+    })
+</script>
+</html>

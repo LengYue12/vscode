@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*
+            v-bind:设置元素的属性   src  class
+            语法：v-bind:属性名=表达式
+
+            作用：为元素绑定属性
+            完整写法：v-bind:属性名=表达式  简写 :属性名=表达式
+        */
+    </style>
+</head>
+<body>
+    <div id="app">
+        <img src="img/ytmactblrxj.jpg" alt="">
+
+        <!-- 使用v-bind 设置了src属性 -->
+        <img v-bind:src="imgSrc">
+
+        <!-- v-bind 可以简写为 : -->
+        <img v-bind:src="imgSrc" :title="imgTitle">
+
+        <!-- 设置class样式 -->
+        <div :style="{fontSize:size+'px'}">v-bind指令</div>
+    </div>
+</body>
+<script src="js/vue.min.js"></script>
+<script>
+    var VM = new Vue({
+        el:"#app",
+        data:{
+            imgSrc:"img/ytmactblrxj.jpg",
+            imgTitle:"头像",
+            size:50
+        }
+    })
+</script>
+</html>

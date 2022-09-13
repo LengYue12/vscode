@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="1">京城</p>
+    <p class="pu">蒲黄榆</p>
+    <p>地铁</p>
+    <p class="pu">物美大卖场</p>
+    <h3 class="pu">里面有唐心</h3>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script>
+        // $("p").css("color","red");  // 标签选择器，获得所有的p
+        // $(".pu").css("color","red");    // 类选择器
+        // $("#1").css("color","red");     // ID选择器
+        // $(".pu,#1").css("color","red");  // 并集选择器
+        $("h3.pu").css("color","red"); // 交集选择器
+
+    </script>
+</body>
+</html>

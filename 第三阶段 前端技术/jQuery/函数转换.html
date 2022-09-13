@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="title">我是单身狗</h3>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script>
+
+        // jqDOM转jsDOM
+        // var jqDOM = $("#title");
+        // var jsDOM = jqDOM.get(0);
+        // alert(jsDOM.innerHTML);
+
+        // jsDOM转jqDOM
+        var jsDOM = document.getElementById("title");
+        var jqDOM = $(jsDOM);
+        alert(jqDOM.text());
+    </script>
+</body>
+</html>

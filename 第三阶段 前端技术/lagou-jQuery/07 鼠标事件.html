@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <img src="img/022658sy4pssyepy7747cp.jpg" width="300px">
+    <img src="img/022704agg0m8qmj3zgjgmj.jpg" width="300px">
+    <img src="img/6285c8e0ly1flc987johcj211z1kwqdb.jpg" width="300px">
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+    <script>
+
+        $("img").click(function(){
+            // 点击一下换照片
+            $(this).attr("src","img/8781c8c4gy1flejkk4frwj20m80wsgp5.jpg"); // this就是事件触发的源头
+        });
+
+        $("img").mousemove(function(){  // 移动到元素上
+            $(this).css("border","2px solid red");
+        });
+        $("img").mouseout(function(){   // 离开元素
+            $(this).css("border","2px solid white");
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*
+            1.函数调用传参
+                事件绑定方法后，可以传递参数
+                定义方法时，需要定义形参，来接收参数
+                
+            2.事件修饰符
+                可以对事件进行限制，.修饰符
+                .enter 可以限制触发的方式为 回车
+        */
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- 函数传参 -->
+        <input type="button" value="刷礼物" @click="showTime(66,'爱你哥哥！')"/>
+
+        <!-- 事件修饰符 可以指定哪些方式可以触发事件 -->
+        <input type="text" @keyUp.enter="hi"/>
+    </div>
+</body>
+<script src="js/vue.min.js"></script>
+<script>
+    var VM = new Vue({
+        el:"#app",
+        data:{
+
+        },
+        methods: {
+            // 若方法被调用，则接收参数
+            showTime:function(p1,p2){
+                console.log(p1)
+                console.log(p2)
+            },
+            hi:function(){
+                alert("乌鸡哥~~~！");
+            }
+        },
+    })
+</script>
+</html>

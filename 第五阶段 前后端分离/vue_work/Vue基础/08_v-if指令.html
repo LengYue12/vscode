@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*
+            v-if 指令：根据表达式的真假，切换元素的显示和隐藏(操作的是DOM)
+            是将DOM中的元素去掉实现元素的隐藏
+                频繁切换就是使用：v-show 因为操作样式比操作DOM效率高，反之使用 v-if
+                本质上就是通过操作DOM元素来切换状态的，如果为true，就在DOM中把元素加入
+                若为false就把元素从DOM中去掉
+        */
+    </style>
+    <script src="./js/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="button" value="切换状态" @click="changeShow"/>
+        <img src="img/ytmactblrxj.jpg" v-if="isShow">
+    </div>
+</body>
+<script>
+    var VM = new Vue({
+        el:"#app",
+        data:{
+            isShow:false
+        },
+        methods: {
+            changeShow:function(){
+                this.isShow=!this.isShow;
+            }
+        },
+    })
+</script>
+</html>

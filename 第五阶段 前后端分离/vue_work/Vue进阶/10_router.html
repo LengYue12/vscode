@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*
+            1.router 是Vue中的路由管理器对象，用来管理路由的
+            2.route  是路由对象，一个路由就对应了一条访问路径，一组路由用 routes
+            3.每个路由对象，都有两部分：path(路径信息),component(组件)（小页面，JS，HTML，CSS）
+            4.router-link 是对a标签的封装，通过to属性  指定链接
+            5.router-view 路由访问到指定的组件，进行页面展示的。路由的出口，路由到这就结束并展示组件
+        */
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>渣浪.com</h1>
+
+        <p>
+            <!-- 添加超链接，router-link 组件来进行导航，to属性指定连接URL路径 -->
+            <!-- 当点击链接时，就会访问到当前path对应的component组件 -->
+            <!-- 当点击时，跳转显示组件内容 -->
+            <router-link to="/home">go to home</router-link>
+            <router-link to="/news">go to news</router-link>
+        </p>
+
+        <!-- 路由的出口，路由匹配到组件之后，要渲染到这里 -->
+        <router-view></router-view>
+    </div>
+</body>
+<!-- 导入vue 与 router库 -->
+<script src="js/vue.min.js"></script>
+<script src="js/vue-router.min.js"></script>
+<script>
+    // 1.定义路由所需的组件     页面
+    const home = {template:"<div>首页 花边新闻</div>"};
+    const news = {template:"<div>新闻 新闻联播</div>"};
+
+    // 2.定义路由 每个路由有两部分 path(访问路径URL),component(组件页面)
+    const routes = [
+        {path:"/home",component:home},
+        {path:"/news",component:news}
+    ]
+
+    // 3.创建路由管理器实例     把定义好的路由放到路由管理器中管理
+    const router = new VueRouter({
+        routes:routes,
+    })
+
+    // 4.创建Vue实例 ,将router注入到 Vue实例中，让整个应用都拥有路由的功能
+    var VM = new Vue({
+        router
+    }).$mount("#app");  // 代替el，手动挂载
+</script>
+</html>

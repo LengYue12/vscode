@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img{
+        width: 30%;
+        border: 1px solid white;
+    }
+
+</style>
+<body>
+    <img src="img/七月.jpg" onclick="dian()" onmouseover="shang(this)" onmouseout="xia(this)">
+    <img src="img/唐心.jpg" ondblclick="shuang()" onmouseover="shang(this)" onmouseout="xia(this)">
+    <img src="img/冰冰.jpg" onmouseover="shang(this)" onmouseout="xia(this)">
+
+    <script>
+        function dian(){
+            alert("点了一下！");
+        }
+
+        function shuang(){
+            alert("点了两下！");
+        }
+
+        function shang(img){
+            img.style.border = "5px solid red";
+        }
+
+        function xia(img){
+            img.style.border = "1px solid white";
+        }
+    </script>
+</body>
+</html>

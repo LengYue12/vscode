@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- 插值表达式 不会覆盖原来的内容体，直接拼接 -->
+        <h2>{{message}}炎龙铠甲</h2>
+
+        <!-- v-text 获取data数据，设置标签的内容，会覆盖之前的内容体 -->
+        <h2 v-text="message">炎龙铠甲</h2>
+
+        <!-- 拼接字符串 时，要加单引号 拼接数字不用 -->
+        <h2 v-text="message+2"></h2>
+        <h2 v-text="message+'aaa'"></h2>
+    </div>
+</body>
+<script>
+    // 创建vue实例，接管div区域
+    var VM = new Vue({
+        el:"#app",
+        data:{
+            message:"铠甲合体！"
+        }
+    })
+</script>
+</html>

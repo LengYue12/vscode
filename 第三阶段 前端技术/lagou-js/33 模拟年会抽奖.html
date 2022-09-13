@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <img id="tu" src="../html/img/唐心.jpg" width="20%">
+    <br>
+    <button onclick="begin()">开始</button>
+    <button onclick="stop()">停止</button>
+
+    <script>
+
+        var arr = ["唐心.jpg","冰冰.jpg","霏霏.jpg","玲玲.jpg","七月.jpg","小朵.jpg"];        
+
+        function begin(){
+            timer = setInterval(bian,100);  // 没有使用var，所以timer对象是全局变量
+        }
+
+        function stop(){
+            clearInterval(timer);   // 停止定时器
+        }
+
+        function bian(){
+                var i = Math.floor(Math.random()*arr.length);  // 0-5
+                document.getElementById("tu").src = "../html/img/" + arr[i];
+            }
+
+    </script>
+</body>
+</html>

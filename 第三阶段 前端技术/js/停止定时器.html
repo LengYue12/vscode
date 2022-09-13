@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="tu" src="img/七月.jpg" width="30%">
+    <br>
+    <button onclick="begin()">开始</button>
+    <button onclick="stop()">停止</button>
+
+    <script>
+        var arr = ["七月.jpg","玲玲.jpg","唐心.jpg","小朵.jpg"];
+        function begin(){
+           timer =  setInterval(bian,1000);
+        }
+
+        function stop(){
+            clearInterval(timer);
+        }
+        function bian(){
+            var i = Math.floor(Math.random()*arr.length);
+            document.getElementById("tu").src = "img/" + arr[i];
+        }
+    </script>
+</body>
+</html>

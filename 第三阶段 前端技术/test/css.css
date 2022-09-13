@@ -1,0 +1,134 @@
+.c > li{
+    list-style-type: none;  
+    background-color:#66ffff;
+    border: 1px #00ffff solid;
+    width: 100px;
+    text-align: center;
+    float: right;
+    padding: 1px;
+    margin-top: 20px;
+    line-height: 20px;
+  }
+  .a{
+      float: left;
+      position: relative;
+      left: 40px;
+      top: 20px;
+  }
+  .b{
+      float: right;    
+      position: relative;
+      left: 50px; 
+      top: 10px;
+  }
+  .d > li{
+      list-style-type: none;
+      background-color: red;
+      color: white;
+      line-height: 45px;
+      width: 80px;
+      text-align: center;
+      float: left;
+      font-size: 2em;
+      padding: 2.5px;
+      position: relative;
+      right: 10px;
+      top: -15px;
+  }
+  div{
+      width: 1500px;
+      height: 70px;
+      border: 2px white solid;
+  }
+  .e{
+      position: absolute;
+      left: 40px;
+  }
+  
+  .da{
+      width: 1450px;
+      height: 450px;
+      border: 2px chartreuse solid;
+      position: absolute;
+      top: 350px;
+      left: 40px;
+  }
+
+  .aa{
+      position: absolute;
+      left: -15px;
+      top: 20px;
+  }
+  .bb{
+      position: absolute;
+      left: 40px;
+      top: 140px;
+      z-index: 4;
+  }
+  .cc{
+      position: absolute;
+      left: 20px;
+      top: 150px;
+      z-index: 2;
+  }
+  .dd{
+      position: absolute;
+      left: 1000px;
+      top: 100px;
+      z-index: 4;
+  }
+  .ee{
+      position: absolute;
+      left: 1000px;
+      top: 120px;
+      z-index: 2;
+  }
+  .ff{
+      position: absolute;
+      left: 1000px;
+      top: 300px;
+      z-index: 4;
+  }
+  .gg{
+      position: absolute;
+      left: 1000px;
+      top: 300px;
+      z-index: 2;
+
+  }
+  h5{
+      color: blue;
+  }
+  .xiao{
+      width: 370px;
+      height: 300px;
+      border: 2px white solid;
+      color: black;
+      position: relative;
+      left: 300px;
+      top: 140px;
+  }
+  .shang{
+      width: 260px;
+      height: 150px;
+      border: 2px white solid;
+      color:black;
+      position: absolute;
+      left: 1100px;
+      top: 90px;
+  }
+  .xia{
+      width: 260px;
+      height: 150px;
+      border: 2px white solid;
+      color: black;
+      position: absolute;
+      left: 1100px;
+      top: 270px;
+  }
+  .foot{
+      text-align: center;
+      color:black;
+      position: absolute;
+      top: 780px;
+  }
